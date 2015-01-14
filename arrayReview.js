@@ -65,6 +65,9 @@ var second;
 
   //code here
 
+  second = first.slice(0, 5);
+  second.push(6, 7);
+
 alert(first) //[1,2,3,4,5];
 alert(second) //[1,2,3,4,5,6,7];
 
