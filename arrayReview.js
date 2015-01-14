@@ -78,9 +78,23 @@ alert(second) //[1,2,3,4,5,6,7];
 
 
 //write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
+ //code here
+ 
 var sentence = "Dev Mountain is the best"
 
-  //code here
+var longest = function(sentence) {
+	var array = sentence.split(" "); // split up sentence into separate elements
+	var word = "";
+	for (var i = 0; i < array.length; i++) {
+		if (array[i].length > word.length) {
+			word = array[i];
+		}
+	}
+	return word;
+};
+longest(sentence);
+
+ 
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
