@@ -7,7 +7,7 @@ var first = function(array, callback) {
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
-  console.log('The first name in names is ', firstName)
+  console.log('The first name in names is', firstName)
 });
 
 
@@ -22,7 +22,7 @@ var last = function(array, callback) {
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
-  console.log('The last name in names is ', lastName);
+  console.log('The last name in names is', lastName);
 });
 
 
@@ -56,7 +56,7 @@ contains('Colt', names, function(yes){
 
 
 
-/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */ !!!!!!!!!!!
+/* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */ 
 
 
 var map = function(array, callback) {
@@ -80,13 +80,15 @@ map(numbers, function(num){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-var uniq = function() {
-        //loop at the items
+var uniq = function(array, callback) {
+  var newArray = [];
+  for (var i = 0; i < array.length; i++) {      //loop at the items
+    if (newArray.indexOf(array[i]) === -1) {
+      newArray.push(array[i]);
+    }
+  }
+  callback(newArray);
 }
-
-
-
-
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
@@ -98,12 +100,16 @@ uniq(names, function(uniqArr){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
+var each = function (array, callback) {
+  for (var i = 0; i < array.length; i++) {
+    console.log(callback(array[i], i));
+  }
 
-
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
-  console.log('The item in the ' + indice + 'position is ' + item)
+  console.log('The item in the ' + indice + ' position is ' + item)
 });
 
 
@@ -111,6 +117,16 @@ each(names, function(item, indice){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
+var getUserById = function (userId, array, callback) {
+  for (var i = 0; i < array.length; i++) {
+    for (var key in array[i]) {
+      if (array[i][key] === userId) {
+        callback(array[i]);
+      }
+    }
+
+  }
+};
 
 
 
