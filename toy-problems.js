@@ -7,17 +7,34 @@ Write a function that takes an array of integers and returns the sum of the inte
 plusOneSum([1, 2, 3, 4]); // 14
 
 */
-
+var plusOneSum = function (array) {
+	var newArray = [];
+	var total = 0;
+	for (var i = 0; i < array.length; i++) {
+		newArray.push(array[i] + 1);
+	}
+	for (var i = 0; i < newArray.length; i++) {
+		total += newArray[i];
+	}
+	return total;
+};
 
 
 /*
 
-Write a function that accepts a multi dimensional array and returns a flattened version.
+Write a function that accepts a multi dimensional array and returns a flattened version. !!!!!!!!!!!
 
 flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
 
 */
 
+var flatten = function (array) {
+	for (var i = 0; i < array.length; i++) {
+		var flattened = parseInt(array[i]);
+	}
+	return flattened;
+
+};
 
 
 /*
